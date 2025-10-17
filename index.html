@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Button Example</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav">
+        <div class="logo">demo</div>
+        <div class="list">
+            <ul>
+                <li class="nav-item" id="server">service</li>
+                <li class="nav-item">packages</li>
+                <li class="nav-item">who are you</li>
+                <li class="nav-item">portfolio</li>
+                <li class="nav-item">about us</li>
+            </ul>
+        </div>
+        <div class="button">
+            <button class="nav-button">Contact Us</button>
+        </div>
+    </nav>
+         
+
+
+
+
+
+    <!-- Form with Submit Button -->
+    <form id="myForm">
+        <h1>hfjhfjkha</h1>
+        <label for="name">Name</label>
+        <input type="text" id="name" class="form-input" placeholder="Enter your name">
+        <button type="submit" class="form-button">Submit</button>
+    </form>
+    <div id="message" class="message"></div>
+
+    <!-- Standalone Button -->
+    <button class="custom-button">Click Me!</button>
+
+      <div class="container">
+        <h1>Click Counter</h1>
+        <button class="counter-button">Press Me!</button>
+        <p class="counter-display">Clicks: 0</p>
+    </div>
+
+    <script>
+
+// script.js
+
+// Form Submission (form-button)
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent page reload
+    const input = document.getElementsByClassName("form-input")[0];
+    const value = input.value.trim();
+    const messageDiv = document.getElementsByClassName("message")[0];
+
+    if (value !== "") {
+        messageDiv.textContent = `Form submitted! You entered: ${value}`;
+        messageDiv.style.color = "green";
+    } else {
+        messageDiv.textContent = "Please enter your name!";
+        messageDiv.style.color = "red";
+    }
+});
+
+// Navigation Button (nav-button)
+const navButton = document.getElementsByClassName("nav-button")[0];
+navButton.addEventListener("click", function() {
+    alert("Contact Us button clicked!");
+    this.style.backgroundColor = "#e6c200"; // Change background on click
+});
+
+// Standalone Button (custom-button)
+const customButton = document.getElementsByClassName("custom-button")[0];
+customButton.addEventListener("click", function() {
+    alert("Custom button clicked!");
+    this.style.backgroundColor = "#218838"; // Change background on click
+    // Example: Toggle a class for additional styling
+    this.classList.toggle("active");
+});
+ document.getElementById("server").addEventListener("click",function(){
+    alert("server button clicked");
+    this.style.backgroundColor=red;
+    thisclassList.toggle("active");
+ })
+
+
+// let clickCount = 0;
+// const button = document.getElementsByClassName("counter-button")[0];
+
+// button.addEventListener("click", function() {
+//     clickCount++;
+//     alert(`Button clicked ${clickCount} times!`);
+// });
+
+let clickCount = 0;
+
+// Get the button and display elements by class name
+const button = document.getElementsByClassName("counter-button")[0];
+const display = document.getElementsByClassName("counter-display")[0];
+
+// Add click event listener to the button
+button.addEventListener("click", function() {
+    // Arithmetic operation: Increment counter
+    clickCount++;
+    
+    // DOM operation: Update display text
+    display.textContent = `Clicks: ${clickCount}`;
+    
+    // Optional: Alert after every 5 clicks
+    if (clickCount % 5 === 0) {
+        alert(`You've clicked the button ${clickCount} times!`);
+    }
+});
+
+
+    </script>
+</body>
+</html>
+
+

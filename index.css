@@ -1,0 +1,160 @@
+.nav-button, .form-button, .custom-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Navigation Button */
+.nav-button {
+    background-color: #ffd700; /* Gold */
+    color: #333;
+}
+
+.nav-button:hover {
+    background-color: #e6c200; /* Darker gold */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Form Button */
+.form-button {
+    background-color: #007bff; /* Blue */
+    color: white;
+    width: 100%; /* Full width for form */
+    max-width: 400px; /* Limit width */
+}
+
+.form-button:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: scale(1.05);
+}
+
+/* Standalone Button */
+.custom-button {
+    background-color: #28a745; /* Green */
+    color: white;
+    display: block;
+    margin: 20px auto; /* Center the button */
+}
+
+.custom-button:hover {
+    background-color: #218838; /* Darker green */
+    transform: scale(1.05);
+}
+
+/* Navigation Bar Styling */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input.form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.message {
+    max-width: 400px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation Bar */
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .list ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Form Button */
+    .form-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Standalone Button */
+    .custom-button {
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-button, .form-button, .custom-button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input.form-input {
+        padding: 8px;
+    }
+}
